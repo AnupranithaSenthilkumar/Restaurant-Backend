@@ -10,8 +10,8 @@ const app = express();
 
 app.use(
   cors({
-      origin: ["http://localhost:5173", "restaurant-reservation-cyan.vercel.app"],
-      methods: ["POST"],
+      origin: ["http://localhost:5173", "restaurant-reservation-cyan.vercel.app","https://restaurant-frontend-nine-theta.vercel.app"],
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     credentials: true,
   })
 );
@@ -23,6 +23,8 @@ app.get("/", (req, res, next)=>{return res.status(200).json({
   success: true,
   message: "Hello"
 })})
+
+
 
 dbConnection();
 
